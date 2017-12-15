@@ -1,0 +1,14 @@
+# Dialog Actions
+
+Here are just a couple of handy simple actions for when you want to open a dialog. 
+
+## Dialog Server Action
+
+for:: The Server Side Id of the Dialog to open
+dialogAction:: *show* or *hide*
+
+
+## Open Tooltip Client Side Action
+
+dialogId:: the server side id of the tooltip dialog to open
+targetId:: the server side id of the component which you want the tooltip dialog to show over

@@ -33,6 +33,7 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 		return concat(files, new String[] { 
 				"com/ibm/xsp/extlibx/controls/config/extlib-table.xsp-config", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-mastercheckbox.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-dialog.xsp-config", // $NON-NLS-1$
 		});
 	}
 
