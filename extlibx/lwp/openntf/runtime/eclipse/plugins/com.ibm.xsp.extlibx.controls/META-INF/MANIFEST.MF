@@ -4,11 +4,19 @@ Bundle-Name: ExtlibX Controls
 Bundle-SymbolicName: com.ibm.xsp.extlibx.controls;singleton:=true
 Bundle-Version: 9.0.1.v00_17_qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: com.ibm.commons,
+Require-Bundle: org.eclipse.core.runtime,
+ com.ibm.commons,
  com.ibm.xsp.core,
  com.ibm.xsp.extsn,
  com.ibm.xsp.extlib,
- com.ibm.xsp.extlibx.core
-Export-Package: com.ibm.xsp.extlibx.component.table,
+ com.ibm.xsp.extlibx.core,
+ com.ibm.xsp.designer
+Export-Package: com.ibm.xsp.extlibx.component.form,
+ com.ibm.xsp.extlibx.component.table,
  com.ibm.xsp.extlibx.controls.config,
+ com.ibm.xsp.extlibx.minifier,
+ com.ibm.xsp.extlibx.plugin,
+ com.ibm.xsp.extlibx.renderkit.html_extended.form,
  com.ibm.xsp.extlibx.renderkit.table
+Bundle-ActivationPolicy: lazy
+Bundle-Activator: com.ibm.xsp.extlibx.plugin.ControlsXPluginActivator

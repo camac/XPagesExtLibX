@@ -17,4 +17,5 @@ Bundle-Activator: com.ibm.xsp.extlibx.plugin.ExtLibXCoreActivator
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: com.ibm.xsp.extlibx.plugin,
  com.ibm.xsp.extlibx.relational.jdbc,
- com.ibm.xsp.extlibx.relational.jdbc.jndi
+ com.ibm.xsp.extlibx.relational.jdbc.jndi,
+ com.ibm.xsp.extlibx.resources
