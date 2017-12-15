@@ -13,8 +13,7 @@ import com.ibm.commons.util.io.json.JsonGenerator;
 import com.ibm.commons.util.io.json.JsonJavaFactory;
 import com.ibm.xsp.component.FacesAttrsObject;
 import com.ibm.xsp.component.UIViewRootEx;
-import com.ibm.xsp.extlib.component.form.MasterCheckbox;
-import com.ibm.xsp.extlib.resources.ExtLibResources;
+import com.ibm.xsp.extlibx.component.form.MasterCheckbox;
 import com.ibm.xsp.extlibx.resources.ExtLibXResources;
 import com.ibm.xsp.renderkit.ReadOnlyAdapterRenderer;
 import com.ibm.xsp.renderkit.html_basic.AttrsUtil;
@@ -33,7 +32,7 @@ public class MasterCheckboxRenderer extends SelectManyCheckboxListRenderer {
 	public void encodeBegin(FacesContext context, UIComponent component) throws IOException {
 
 		UIViewRootEx rootEx = (UIViewRootEx) context.getViewRoot();
-		ExtLibResources.addEncodeResource(rootEx, ExtLibXResources.extlibMasterCheckbox);
+		ExtLibXResources.addEncodeResource(rootEx, ExtLibXResources.extlibMasterCheckbox);
 
 		super.encodeBegin(context, component);
 
