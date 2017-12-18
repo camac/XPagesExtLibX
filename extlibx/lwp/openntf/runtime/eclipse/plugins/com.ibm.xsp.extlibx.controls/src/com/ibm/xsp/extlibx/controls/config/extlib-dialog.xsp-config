@@ -11,8 +11,8 @@
 	<complex-type>
 		<description>Dialog Action</description>
 		<display-name>Dialog Action</display-name>
-		<complex-id>com.jord.xsp.actions.server.DialogAction</complex-id>
-		<complex-class>com.jord.xsp.actions.server.DialogAction
+		<complex-id>com.ibm.xsp.extlibx.actions.server.DialogAction</complex-id>
+		<complex-class>com.ibm.xsp.extlibx.actions.server.DialogAction
 		</complex-class>
 		<property>
 			<description>The Target Dialog to Open</description>
@@ -58,9 +58,9 @@
 	<complex-type>
 		<description>Opens a Tooltip Dialog</description>
 		<display-name>Open Tooltip Dialog Action</display-name>
-		<complex-id>com.jord.xsp.actions.client.OpenTooltipDialogClientAction
+		<complex-id>com.ibm.xsp.extlibx.actions.client.OpenTooltipDialogClientAction
 		</complex-id>
-		<complex-class>com.jord.xsp.actions.client.OpenTooltipDialogClientAction
+		<complex-class>com.ibm.xsp.extlibx.actions.client.OpenTooltipDialogClientAction
 		</complex-class>
 		<property>
 			<description>The Id of the Tooltip Dialog to Open</description>

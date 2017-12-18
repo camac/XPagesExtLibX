@@ -29,7 +29,7 @@ import com.ibm.xsp.util.FacesUtil;
 
 public class SlaveCheckboxRenderer extends CheckboxRenderer {
 
-	public static final String XSPPROP_STYLE = "smartadmin.checkbox.style";
+	public static final String XSPPROP_STYLE = "extlib.checkbox.style";
 
 	public SlaveCheckboxRenderer() {
 		super();

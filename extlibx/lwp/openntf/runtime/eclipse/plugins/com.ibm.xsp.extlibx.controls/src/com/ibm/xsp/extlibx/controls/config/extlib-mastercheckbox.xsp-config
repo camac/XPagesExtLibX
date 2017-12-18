@@ -10,8 +10,8 @@
 		<description>A Master Checkbox with is used in tandem with slaveCheckBoxes. Bind the value of this control to a List of Strings, or a scoped variable. 
 		Upon submission, the value will be a list of all the checkedValue's of the slaveCheckboxes</description>
 		<display-name>Master CheckBox</display-name>
-		<component-type>com.ibm.xsp.extlib.component.form.MasterCheckbox</component-type>
-		<component-class>com.ibm.xsp.extlib.component.form.MasterCheckbox</component-class>
+		<component-type>com.ibm.xsp.extlibx.component.form.MasterCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.form.MasterCheckbox</component-class>
 		
 		<property>
 			<description>JQuery Selector to find a parent element of the checkbox which when clicked will toggle the checkbox</description>
@@ -78,8 +78,8 @@
 	<component>
 		<description>A Slave CheckBox to be used in tandem with a Master Checkbox</description>
 		<display-name>Slave Check Box</display-name>
-		<component-type>com.ibm.xsp.extlib.component.form.SlaveCheckbox</component-type>
-		<component-class>com.ibm.xsp.extlib.component.form.SlaveCheckbox</component-class>
+		<component-type>com.ibm.xsp.extlibx.component.form.SlaveCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.form.SlaveCheckbox</component-class>
 		
 		<property>
 			<description>The ServerSide Id of the Master Check Box that this slave will report to</description>
