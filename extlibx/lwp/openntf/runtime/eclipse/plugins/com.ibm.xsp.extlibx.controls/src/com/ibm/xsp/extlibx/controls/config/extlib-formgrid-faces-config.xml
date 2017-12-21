@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+	<render-kit>
+		<renderer>
+			<component-family>javax.faces.Panel</component-family>
+			<renderer-type>com.ibm.xsp.extlibx.FormGrid</renderer-type>
+			<renderer-class>com.ibm.xsp.extlibx.renderkit.layout.FormGridRenderer</renderer-class>
+		</renderer>
+	</render-kit>
+</faces-config>

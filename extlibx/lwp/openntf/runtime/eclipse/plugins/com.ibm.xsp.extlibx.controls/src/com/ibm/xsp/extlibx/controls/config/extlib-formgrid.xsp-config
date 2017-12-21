@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+		<default-prefix>xe</default-prefix>
+	</faces-config-extension>
+
+	<component>
+		<description>A Control which performs the layout of a Bootstrap Form
+		</description>
+		<display-name>Form Grid</display-name>
+		<component-type>com.ibm.xsp.extlibx.FormGrid</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.layout.UIFormGrid</component-class>
+		<component-extension>
+			<base-component-type>com.ibm.xsp.Panel
+			</base-component-type>
+			<renderer-type>com.ibm.xsp.extlibx.FormGrid</renderer-type>
+			<tag-name>formGrid</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Layout</category>
+			</designer-extension>
+		</component-extension>
+		<property>
+			<description>The bootstrap form class ie.
+				form-horizontal,form-inline
+			</description>
+			<display-name>formClass</display-name>
+			<property-name>formClass</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						form-vertical|vertical
+						form-horizontal|horizontal
+						form-inline|inline
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>The Bootstrap form Layout type 
+			</description>
+			<display-name>layout</display-name>
+			<property-name>layout</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						vertical|vertical
+						horizontal|horizontal
+						inline|inline
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<property>
+
+			<description> disableRowError</description>
+			<display-name>disableRowError</display-name>
+			<property-name>disableRowError</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						true|true
+						false|false
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<property>
+
+			<description> disableErrorSummary</description>
+			<display-name>disableErrorSummary</display-name>
+			<property-name>disableErrorSummary</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						true|true
+						false|false
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<property>
+			<description>Panel Header</description>
+			<display-name>Panel Header</display-name>
+			<property-name>panelHeader</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>Panel Footer</description>
+			<display-name>Panel Footer</display-name>
+			<property-name>panelFooter</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<property>
+			<description>The bootstrap panel type like panel-default
+			</description>
+			<display-name>panelType</display-name>
+			<property-name>panelType</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						panel-default|panel-default
+						panel-primary|panel-primary
+						panel-success|panel-success
+						panel-info|panel-info
+						panel-warning|panel-warning
+						panel-danger|panel-danger
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<property>
+			<description>Label Size</description>
+			<display-name>LabelSize</display-name>
+			<property-name>labelSize</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>Field Size</description>
+			<display-name>FieldSize</display-name>
+			<property-name>fieldSize</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+		<property>
+			<description>Header</description>
+			<display-name>Header</display-name>
+			<property-name>header</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+		<property>
+			<description>Add mandatory LabelId's to show * infront of them.
+			</description>
+			<display-name>ServerSideValidationLabelIds
+			</display-name>
+			<property-name>serverSideValidationLabelIds
+			</property-name>
+			<property-class>java.util.Collection
+			</property-class>
+			<property-extension>
+				<collection-property>true</collection-property>
+				<property-item-class>java.lang.String
+				</property-item-class>
+				<property-add-method>addString</property-add-method>
+				<allow-run-time-binding>false</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+	</component>
+</faces-config>
