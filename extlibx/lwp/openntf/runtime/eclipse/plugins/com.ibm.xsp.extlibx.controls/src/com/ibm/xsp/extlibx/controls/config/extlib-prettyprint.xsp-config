@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+		<default-prefix>xe</default-prefix>
+	</faces-config-extension>
+
+	<component>
+
+		<description>A control that displays the Pretty Printed Source Code</description>
+		<display-name>Pretty Print</display-name>
+
+		<component-type>com.ibm.xsp.extlibx.UIPrettyPrint</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.form.UIPrettyPrint</component-class>
+
+		<property>
+			<description>The name of the Page or Custom Control to show contents of</description>
+			<display-name>Page or Custom Control Name</display-name>
+			<property-name>pageName</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+
+		<component-extension>
+
+			<base-component-type>com.ibm.xsp.Panel</base-component-type>
+
+			<component-family>javax.faces.Panel</component-family>
+
+			<tag-name>prettyPrint</tag-name>
+
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Core</category>
+			</designer-extension>
+
+		</component-extension>
+
+	</component>
+
+</faces-config>

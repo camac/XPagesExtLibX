@@ -34,6 +34,7 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 				"com/ibm/xsp/extlibx/controls/config/extlib-table.xsp-config", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-mastercheckbox.xsp-config", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-dialog.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-prettyprint.xsp-config", // $NON-NLS-1$
 		});
 	}
 
