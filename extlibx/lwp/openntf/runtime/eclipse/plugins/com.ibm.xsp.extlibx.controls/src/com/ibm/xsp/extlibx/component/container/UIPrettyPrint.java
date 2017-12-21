@@ -1,4 +1,4 @@
-package com.ibm.xsp.extlibx.component.form;
+package com.ibm.xsp.extlibx.component.container;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,6 +15,9 @@ import com.ibm.xsp.util.HtmlUtil;
 public class UIPrettyPrint extends UIPanelEx {
 
 	private String pageName = null;
+
+	private Boolean lineNumbers = null;
+	private String languageHint = null;
 
 	public UIPrettyPrint() {
 		setTagName("pre");
@@ -41,6 +44,46 @@ public class UIPrettyPrint extends UIPanelEx {
 		this.pageName = pageName;
 	}
 
+	public String getLanguageHint() {
+
+		if (this.languageHint != null) {
+			return this.languageHint;
+		}
+
+		ValueBinding vb = getValueBinding("languageHint");
+
+		if (vb != null) {
+			return (String) vb.getValue(getFacesContext());
+		}
+
+		return null;
+
+	}
+
+	public void setLanguageHint(String languageHint) {
+		this.languageHint = languageHint;
+	}
+
+	public Boolean isLineNumbers() {
+
+		if (this.lineNumbers != null) {
+			return this.lineNumbers;
+		}
+
+		ValueBinding vb = getValueBinding("lineNumbers");
+
+		if (vb != null) {
+			return (Boolean) vb.getValue(getFacesContext());
+		}
+
+		return false;
+
+	}
+
+	public void setLineNumbers(Boolean lineNumbers) {
+		this.lineNumbers = lineNumbers;
+	}
+
 	@Override
 	public void restoreState(FacesContext context, Object state) {
 
@@ -49,16 +92,20 @@ public class UIPrettyPrint extends UIPanelEx {
 		super.restoreState(context, values[0]);
 
 		pageName = (String) values[1];
+		languageHint = (String) values[2];
+		lineNumbers = (Boolean) values[3];
 
 	}
 
 	@Override
 	public Object saveState(FacesContext context) {
 
-		Object[] values = new Object[2];
+		Object[] values = new Object[4];
 
 		values[0] = super.saveState(context);
 		values[1] = pageName;
+		values[2] = languageHint;
+		values[3] = lineNumbers;
 
 		return values;
 
@@ -72,13 +119,14 @@ public class UIPrettyPrint extends UIPanelEx {
 		List<String> urls = new ArrayList<String>();
 
 		String page = getPageName();
-		
-		if (StringUtil.isEmpty(page)) return;
-		
+
+		if (StringUtil.isEmpty(page))
+			return;
+
 		if (page.endsWith(".xsp") && !page.startsWith("/")) {
 			page = "/" + page;
 		}
-		
+
 		urls.add(page);
 
 		for (String string : urls) {

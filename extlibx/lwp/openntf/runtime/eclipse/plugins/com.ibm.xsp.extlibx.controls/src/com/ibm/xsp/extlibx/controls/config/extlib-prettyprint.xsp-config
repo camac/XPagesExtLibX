@@ -12,7 +12,7 @@
 		<display-name>Pretty Print</display-name>
 
 		<component-type>com.ibm.xsp.extlibx.UIPrettyPrint</component-type>
-		<component-class>com.ibm.xsp.extlibx.component.form.UIPrettyPrint</component-class>
+		<component-class>com.ibm.xsp.extlibx.component.container.UIPrettyPrint</component-class>
 
 		<property>
 			<description>The name of the Page or Custom Control to show contents of</description>
@@ -20,6 +20,71 @@
 			<property-name>pageName</property-name>
 			<property-class>java.lang.String</property-class>
 			<property-extension>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>Language Hint for formatting</description>
+			<display-name>Language Hint for formatting</display-name>
+			<property-name>languageHint</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<category>basics</category>
+					<editor>
+						com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						lang-apollo|lang-apollo
+						lang-basic|lang-basic
+						lang-clj|lang-clj
+						lang-css|lang-css
+						lang-dart|lang-dart
+						lang-erlang|lang-erlang
+						lang-ex|lang-ex
+						lang-go|lang-go
+						lang-hs|lang-hs
+						lang-kotlin|lang-kotlin
+						lang-lasso|lang-lasso
+						lang-lisp|lang-lisp
+						lang-llvm|lang-llvm
+						lang-logtalk|lang-logtalk
+						lang-lua|lang-lua
+						lang-matlab|lang-matlab
+						lang-ml|lang-ml
+						lang-mumps|lang-mumps
+						lang-n|lang-n
+						lang-pascal|lang-pascal
+						lang-proto|lang-proto
+						lang-r|lang-r
+						lang-rd|lang-rd
+						lang-rust|lang-rust
+						lang-scala|lang-scala
+						lang-sql|lang-sql
+						lang-swift|lang-swift
+						lang-tcl|lang-tcl
+						lang-tex|lang-tex
+						lang-vb|lang-vb
+						lang-vhdl|lang-vhdl
+						lang-wiki|lang-wiki
+						lang-xq|lang-xq
+						lang-yaml|lang-yaml
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+
+			<description>Show Line Numbers</description>
+			<display-name>Show Line Numbers</display-name>
+			<property-name>lineNumbers</property-name>
+			<property-class>java.lang.Boolean</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
 				<designer-extension>
 					<category>basics</category>
 				</designer-extension>

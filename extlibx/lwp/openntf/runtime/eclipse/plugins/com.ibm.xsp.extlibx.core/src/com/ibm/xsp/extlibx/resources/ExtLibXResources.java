@@ -24,6 +24,7 @@ import com.ibm.xsp.component.UIViewRootEx;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.ibm.xsp.resource.DojoModuleResource;
 import com.ibm.xsp.resource.Resource;
+import com.ibm.xsp.resource.ScriptResource;
 import com.ibm.xsp.resource.StyleSheetResource;
 
 public class ExtLibXResources {
@@ -71,5 +72,8 @@ public class ExtLibXResources {
     public static final DojoModuleResource dijitMasterCheckbox = new DojoModuleResource("dijit.form.MasterCheckbox");
     
     public static final DojoModuleResource extlibMasterCheckbox = new DojoModuleResource("extlib.dijit.MasterCheckbox"); // $NON-NLS-1$
+    
+    public static final ScriptResource extlibPrettify = new ScriptResource("/.ibmxspres/.extlib/google-code-prettify/prettify.js", true);
+    public static final StyleSheetResource extlibPrettifyCss = new StyleSheetResource("/.ibmxspres/.extlib/google-code-prettify/prettify.css");
     
 }
