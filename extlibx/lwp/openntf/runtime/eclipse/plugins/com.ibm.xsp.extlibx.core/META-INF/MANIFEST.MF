@@ -20,4 +20,5 @@ Export-Package: com.ibm.xsp.extlibx.application,
  com.ibm.xsp.extlibx.config,
  com.ibm.xsp.extlibx.plugin,
  com.ibm.xsp.extlibx.relational.jdbc,
- com.ibm.xsp.extlibx.relational.jdbc.jndi
+ com.ibm.xsp.extlibx.relational.jdbc.jndi,
+ com.ibm.xsp.extlibx.resources

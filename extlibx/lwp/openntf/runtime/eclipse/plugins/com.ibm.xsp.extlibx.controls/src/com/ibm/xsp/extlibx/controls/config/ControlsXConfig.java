@@ -30,7 +30,12 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 
 	@Override
 	public String[] getXspConfigFiles(String[] files) {
-		return concat(files, new String[] { "com/ibm/xsp/extlibx/controls/config/extlib-table.xsp-config", // $NON-NLS-1$
+		return concat(files, new String[] { 
+				"com/ibm/xsp/extlibx/controls/config/extlib-table.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-mastercheckbox.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-dialog.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-prettyprint.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-formgrid.xsp-config", // $NON-NLS-1$
 		});
 	}
 
@@ -39,6 +44,8 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 		return concat(files, new String[] { 
 				"com/ibm/xsp/extlibx/controls/config/extlib-table-faces-config.xml", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-jdbc-faces-config.xml", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-mastercheckbox-faces-config.xml", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-formgrid-faces-config.xml", // $NON-NLS-1$
 		});
 	}
 

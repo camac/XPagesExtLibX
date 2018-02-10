@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+	<faces-config-extension>
+	    <namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+    	<default-prefix>xe</default-prefix>
+	</faces-config-extension>
+
+	<component>
+		<description>A Master Checkbox with is used in tandem with slaveCheckBoxes. Bind the value of this control to a List of Strings, or a scoped variable. 
+		Upon submission, the value will be a list of all the checkedValue's of the slaveCheckboxes</description>
+		<display-name>Master CheckBox</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.form.MasterCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.form.MasterCheckbox</component-class>
+		
+		<property>
+			<description>JQuery Selector to find a parent element of the checkbox which when clicked will toggle the checkbox</description>
+			<display-name>Parent Selector for Click</display-name>
+			<property-name>parentSelectorClick</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>Selector to find a parent element of the checkbox which will have it's styleclass toggled using the parentStyleClassChecked and parentStyleClassUnchecked classes</description>
+			<display-name>Parent Selector for StyleClass Toggle</display-name>
+			<property-name>parentSelectorStyleClass</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+		<property>
+			<description>Style Class for the Parent Element when Checkbox is checked</description>
+			<display-name>Checked Style Class for Parent </display-name>
+			<property-name>parentStyleClassChecked</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>		
+
+		<property>
+			<description>Style Class for the Parent Element when Checkbox is unchecked</description>
+			<display-name>Unchecked Style Class for Parent </display-name>
+			<property-name>parentStyleClassUnchecked</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>		
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.SelectManyCheckbox</base-component-type>
+			<tag-name>masterCheckBox</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+	<component>
+		<description>A Slave CheckBox to be used in tandem with a Master Checkbox</description>
+		<display-name>Slave Check Box</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.form.SlaveCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.form.SlaveCheckbox</component-class>
+		
+		<property>
+			<description>The ServerSide Id of the Master Check Box that this slave will report to</description>
+			<display-name>Master CheckBox Id</display-name>
+			<property-name>master</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor
+					</editor>
+				</designer-extension>
+			</property-extension>
+		</property>
+		
+		<component-extension>
+			<base-component-type>com.ibm.xsp.InputCheckbox</base-component-type>
+			<tag-name>slaveCheckBox</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+</faces-config>

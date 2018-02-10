@@ -1,6 +1,12 @@
-= Master/Slave Checkboxes
+# Master/Slave Checkboxes
 
 The Master/Slave checkbox controls are used to provide a user-friendly (and developer friendly) way of acheiving bulk selection from a list of records.
+
+## Overview
+
+A limitation of the core CheckboxGroup control is that all the checkboxes are rendered in the same location on the page. 
+
+This is fine in a situation such as filling out a form, but it is useless for the situation where you want to select multiple records that are within a repeat control.
 
 * Select All / Deselect All
 * Select a checkbox by clicking on a parent element
@@ -8,8 +14,52 @@ The Master/Slave checkbox controls are used to provide a user-friendly (and deve
 
 We can demonstrate these features with some simple examples of selecting some ingredients for a burger.
 
-== Basic Operation
+## Basic Functionality
+
+Here we just demonstrate the basic functionality. The master/slave checkboxes work as a team, they are useless without each other.
+
+### Master Checkbox
+
+The master checkbox is the main control that is bound to a value, either in a document or 
+
+
+## Using a 'row click' style selection
 
 == Styling a Parent Element
 
-== Using a 'row click' style selection
+
+== Checkboxes
+
+=== Master Checkboxes (with Select All / None functionality)
+
+Another thing that we have done, is implement the concept of a 'Master' checkbox
+
+A limitation of the Standard Checkbox Group is that all the checkboxes must be located in the same place, and also that the checkbox values must be know before hand and are validated against
+
+We have set up a 'master' checkbox group so that it can have child checkboxes that are detached from the master
+
+It works similar to when you see a table and there is a 'select all' checkbox at the top.
+
+To use it, you add a ```jord:checkBoxGroup``` and set the property ```master="true"```. Bind the value of the checkboxGroup to a List<String>
+
+You then add ```jord:checkBox``` and set the *masterId* property to whatever the id of the checkboxgroup is e.g. ```masterId="checkboxgroup1"```
+You should also set the *checkedvalue* property to the value that the checkbox uses when selected, this is usually some universalId of a record. e.g. ```checkedValue="#{rowData.id}"```
+
+When the page is submitted, the checkBoxGroup's value binding will be populated with all the checkboxes that are currently visable on the page. 
+If you have paged data, e.g. can only see 30 rows out of 100, and you click select all, it will only select 30
+
+=== Additional Functionality
+
+To enable a better user experience, there is a couple of additional parameters for the CheckBoxGroup **parentSelectorClick** and **parentSelectorStyleClass**
+
+==== parentSelectorClick
+
+This is a *jquery css selector* for use in the 'closest()' function.
+If this parentSelectorClick is set, each checkboxes will find it's parent element (using $(this).closest('selectorhere'); ) and will add an onclick listener to the element that was found. It will also style the pointer as a 'selection' cursor to indicate the element can be clicked.
+
+==== parentSelectorStyleClass
+
+This is a *jquery css selector* for use in the 'closest()' function.
+This property determines a parent element to be selected using this selector, and it will toggle css classes depending on the state of the check box. 
+
+This functionality also uses the *parentStyleClassChecked* and *parentStyleClassUnchecked* properties to determine which classes to add and remove depending on the state of the check box.

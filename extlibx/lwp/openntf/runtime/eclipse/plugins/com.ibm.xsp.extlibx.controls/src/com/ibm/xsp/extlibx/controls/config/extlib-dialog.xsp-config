@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+		<default-prefix>xe</default-prefix>
+		<designer-extension>
+			<control-subpackage-name>dialog</control-subpackage-name>
+		</designer-extension>
+	</faces-config-extension>
+
+	<complex-type>
+		<description>Dialog Action</description>
+		<display-name>Dialog Action</display-name>
+		<complex-id>com.ibm.xsp.extlibx.actions.server.DialogAction</complex-id>
+		<complex-class>com.ibm.xsp.extlibx.actions.server.DialogAction
+		</complex-class>
+		<property>
+			<description>The Target Dialog to Open</description>
+			<display-name>Target Dialog</display-name>
+			<property-name>for</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor
+					</editor>
+					<editor-parameter>
+						http://www.ibm.com/xsp/coreex|dialog
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+		<property>
+			<description>The Action to take on the Dialog</description>
+			<display-name>Dialog Action</display-name>
+			<property-name>dialogAction</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<editor>com.ibm.workplace.designer.property.editors.comboParameterEditor
+					</editor>
+					<editor-parameter>
+						show
+						hide
+					</editor-parameter>
+				</designer-extension>
+			</property-extension>
+		</property>
+		<complex-extension>
+			<tag-name>dialogAction</tag-name>
+			<base-complex-id>simpleActionInterface</base-complex-id>
+			<designer-extension>
+				<category>Basic</category>
+			</designer-extension>
+		</complex-extension>
+	</complex-type>
+
+	<!-- CLIENT SIDE ACTIONS -->
+	<complex-type>
+		<description>Opens a Tooltip Dialog</description>
+		<display-name>Open Tooltip Dialog Action</display-name>
+		<complex-id>com.ibm.xsp.extlibx.actions.client.OpenTooltipDialogClientAction
+		</complex-id>
+		<complex-class>com.ibm.xsp.extlibx.actions.client.OpenTooltipDialogClientAction
+		</complex-class>
+		<property>
+			<description>The Id of the Tooltip Dialog to Open</description>
+			<display-name>TooltipDialog Id</display-name>
+			<property-name>dialogId</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor
+					</editor>
+					<editor-parameter>
+						http://www.ibm.com/xsp/coreex|tooltipDialog
+					</editor-parameter>
+				</designer-extension>
+				<required>true</required>
+			</property-extension>
+		</property>
+		<property>
+			<description>The Id of the Control that this dialog is linked to
+			</description>
+			<display-name>Target Id</display-name>
+			<property-name>targetId</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<property-extension>
+					<designer-extension>
+						<editor>com.ibm.xsp.extlib.designer.tooling.editor.XPageControlIDEditor
+						</editor>
+					</designer-extension>
+					<required>true</required>
+				</property-extension>
+
+				<required>true</required>
+
+			</property-extension>
+		</property>
+		<complex-extension>
+			<tag-name>openTooltipDialog</tag-name>
+			<base-complex-id>simpleActionInterface</base-complex-id>
+			<designer-extension>
+				<action-type>client</action-type>
+				<category>basic</category>
+			</designer-extension>
+		</complex-extension>
+	</complex-type>
+
+
+</faces-config>
