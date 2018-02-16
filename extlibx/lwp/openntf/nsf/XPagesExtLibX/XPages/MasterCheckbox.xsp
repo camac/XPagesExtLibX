@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xc:ccLayout></xc:ccLayout>
+
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<xc:ccMasterCheckboxTable></xc:ccMasterCheckboxTable></div>
+		<div class="col-md-6">
+			<xe:prettyPrint id="prettyPrint1" pageName="ccMasterCheckboxTable.xsp"></xe:prettyPrint>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-3 col-md-offset-1">
+			<xc:ccMasterCheckboxDiv></xc:ccMasterCheckboxDiv></div>
+		<div class="col-md-6">
+			<xe:prettyPrint id="prettyPrint2" pageName="ccMasterCheckboxDiv.xsp"></xe:prettyPrint>
+		</div>
+	</div>
+
+
+</xp:view>

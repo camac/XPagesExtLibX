@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<h2>Example using tr as a Parent Element</h2>
+	<style>tr.selected td { background-color: #5bacf3; color: white; }</style>
+	<xp:table styleClass="table">
+		<xp:tr>
+			<xp:td>
+				<xe:masterCheckBox id="masterCheckBox1" parentSelectorClick="tr" parentSelectorStyleClass="tr" parentStyleClassChecked="selected"
+					value="#{requestScope.burgercontents}">
+				</xe:masterCheckBox>
+			</xp:td>
+			<xp:td>Topping</xp:td>
+		</xp:tr>
+		<xp:repeat id="repeat1" rows="30" value="#{javascript:
+		return ['Bacon', 'Egg', 'Pineapple', 'Lettuce', 'Onion', 'Beetroot']}" var="ingredient">
+			<xp:tr>
+				<xp:td>
+					<xe:slaveCheckBox id="slaveCheckBox4" checkedValue="#{ingredient}" master="masterCheckBox1"></xe:slaveCheckBox>
+				</xp:td>
+				<xp:td>
+					<xp:text escape="true" id="computedField1" value="#{ingredient}"></xp:text>
+				</xp:td>
+			</xp:tr>
+		</xp:repeat>
+	</xp:table>
+	<xp:button value="Submit" id="button2">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete"></xp:eventHandler>
+	</xp:button>
+	<xp:text escape="true" id="computedField2" value="#{requestScope.burgercontents}"></xp:text>
+
+
+</xp:view>

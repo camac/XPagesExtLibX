@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:formGrid id="formGrid1" layout="#{viewScope.formGridLayout}" disableErrorSummary="true" disableRowError="false" header="#{viewScope.formGridHeader}"
+		labelSize="#{viewScope.formGridLabelSize}"
+		fieldSize="#{viewScope.formGridFieldSize}">
+
+		<xp:label value="First Name" id="label1"></xp:label>
+		<xp:inputText id="inputText1" value="#{viewScope.firstName}" required="true" disableClientSideValidation="true">
+			<xp:this.validators>
+				<xp:validateRequired message="Please Enter a First Name"></xp:validateRequired>
+			</xp:this.validators>
+		</xp:inputText>
+
+		<xp:label value="Last Name" id="label2"></xp:label>
+		<xp:inputText id="inputText2" value="#{viewScope.lastName}"></xp:inputText>
+
+	</xe:formGrid>
+	<xp:button value="Submit" id="button1">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete"></xp:eventHandler>
+	</xp:button>
+</xp:view>

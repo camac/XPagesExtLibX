@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:formGrid id="formGrid1" layout="vertical">
+
+		<xp:label value="layout" id="label1"></xp:label>
+		<xp:comboBox id="comboBox1" value="#{viewScope.formGridLayout}">
+			<xp:selectItem itemLabel="vertical" itemValue="vertical"></xp:selectItem>
+			<xp:selectItem itemLabel="horizontal" itemValue="horizontal"></xp:selectItem>
+			<xp:selectItem itemLabel="inline" itemValue="inline"></xp:selectItem>
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:comboBox>
+
+		<xp:label value="labelSize" id="label21"></xp:label>
+		<xp:comboBox id="comboBox4" value="#{viewScope.formGridLabelSize}" defaultValue="" disabled="#{viewScope.formGridLayout ne 'horizontal'}">
+			<xp:selectItem itemLabel="" itemValue=""></xp:selectItem>
+			<xp:selectItem itemLabel="1" itemValue="1"></xp:selectItem>
+			<xp:selectItem itemLabel="2" itemValue="2"></xp:selectItem>
+			<xp:selectItem itemLabel="3" itemValue="3"></xp:selectItem>
+			<xp:selectItem itemLabel="4" itemValue="4"></xp:selectItem>
+			<xp:selectItem itemLabel="5" itemValue="5"></xp:selectItem>
+			<xp:selectItem itemLabel="6" itemValue="6"></xp:selectItem>
+			<xp:selectItem itemLabel="7" itemValue="7"></xp:selectItem>
+			<xp:selectItem itemLabel="8" itemValue="8"></xp:selectItem>
+			<xp:selectItem itemLabel="9" itemValue="9"></xp:selectItem>
+			<xp:selectItem itemLabel="10" itemValue="10"></xp:selectItem>
+			<xp:selectItem itemLabel="11" itemValue="11"></xp:selectItem>
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:comboBox>
+
+		<xp:label value="fieldSize" id="label22"></xp:label>
+		<xp:comboBox id="comboBox5" value="#{viewScope.formGridFieldSize}" defaultValue="" disabled="#{viewScope.formGridLayout ne 'horizontal'}">
+			<xp:selectItem itemLabel="" itemValue=""></xp:selectItem>
+			<xp:selectItem itemLabel="1" itemValue="1"></xp:selectItem>
+			<xp:selectItem itemLabel="2" itemValue="2"></xp:selectItem>
+			<xp:selectItem itemLabel="3" itemValue="3"></xp:selectItem>
+			<xp:selectItem itemLabel="4" itemValue="4"></xp:selectItem>
+			<xp:selectItem itemLabel="5" itemValue="5"></xp:selectItem>
+			<xp:selectItem itemLabel="6" itemValue="6"></xp:selectItem>
+			<xp:selectItem itemLabel="7" itemValue="7"></xp:selectItem>
+			<xp:selectItem itemLabel="8" itemValue="8"></xp:selectItem>
+			<xp:selectItem itemLabel="9" itemValue="9"></xp:selectItem>
+			<xp:selectItem itemLabel="10" itemValue="10"></xp:selectItem>
+			<xp:selectItem itemLabel="11" itemValue="11"></xp:selectItem>
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:comboBox>
+
+		<xp:label value="disableRowError" id="label2"></xp:label>
+		<xp:comboBox id="comboBox2" value="#{viewScope.formGridDisableRowError}" defaultValue="#{false}">
+			<xp:this.converter>
+				<xp:convertBoolean></xp:convertBoolean>
+			</xp:this.converter>
+			<xp:selectItem itemLabel="true" itemValue="#{true}"></xp:selectItem>
+			<xp:selectItem itemLabel="false" itemValue="#{false}"></xp:selectItem>
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:comboBox>
+
+		<xp:label value="disableErrorSummary" id="label3"></xp:label>
+		<xp:comboBox id="comboBox3" value="#{viewScope.formGridDisableErrorSummary}" defaultValue="#{false}">
+			<xp:this.converter>
+				<xp:convertBoolean></xp:convertBoolean>
+			</xp:this.converter>
+			<xp:selectItem itemLabel="true" itemValue="#{true}"></xp:selectItem>
+			<xp:selectItem itemLabel="false" itemValue="#{false}"></xp:selectItem>
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:comboBox>
+
+		<xp:label value="header" id="label4"></xp:label>
+		<xp:inputText id="inputText1" value="#{viewScope.formGridHeader}">
+			<xp:eventHandler event="onchange" submit="true" refreshMode="complete" disableValidators="true"></xp:eventHandler>
+		</xp:inputText>
+
+
+	</xe:formGrid>
+
+</xp:view>
