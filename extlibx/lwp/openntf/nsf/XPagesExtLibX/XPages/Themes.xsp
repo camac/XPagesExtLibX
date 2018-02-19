@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccNav_Main></xc:ccNav_Main>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Themes</h1>
+			<p>Controls developed for this ExtLibX project will mainly support the bootstrap themes</p>
+			<p>Where possible, they will also support Webstandard and OneUI</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Bootstrap 3</h2>
+				<p>This project provides some extra controls that you might find useful!
+					Maybe they will even find their way into the main Extension Library project.</p>
+				<p>
+					<xp:button value="View" id="button1">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap3.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Bootstrap 4</h2>
+				<p>XPages is a very extensible framework, this project provides a few ways to change the behaviour of
+					the xpages runtime to make life easier for you
+					(and your users!) 
+				</p>
+				<p>
+					<xp:button value="View" id="button2">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap4.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+
+			</div>
+			<div class="col-md-4">
+				<h2>WebStandard</h2>
+				<p>The XPages framework provides a very powerful theming system. It has not been used to it's full potential</p>
+				<p>This project hopes to provide some extra options to make your applications stand out!</p>
+				<p>
+					<xp:button value="View" id="button3">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Webstandard.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+</xp:view>

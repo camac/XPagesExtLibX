@@ -3,5 +3,42 @@
 
 	<xc:ccLayout></xc:ccLayout>
 
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">ExtLibX Example Database</h1>
+			<p>Welcome to the Demonstration database for the Extension Library eXperimental project</p>
+			<p>This database gives you an opportunity to see how the Controls and Techniques work.
+				Each Control or Technique is given a dedicated page which you can
+				visit to see in in operation and maybe even adjust some properties to see how it differs.
+				You should also be able to see the exact xpages markup necessary to
+				use the control. (all thanks to the pretty print control!)</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Controls</h2>
+				<p>This project provides some extra controls that you might find useful!
+					Maybe they will even find their way into the main Extension Library project.</p>
+			</div>
+			<div class="col-md-4">
+				<h2>XPages Runtime Extensions</h2>
+				<p>XPages is a very extensible framework, this project provides a few ways to change the behaviour of
+					the xpages runtime to make life easier for you
+					(and your users!) 
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Themes</h2>
+				<p>The XPages framework provides a very powerful theming system. It has not been used to it's full potential</p>
+				<p>This project hopes to provide some extra options to make your applications stand out!</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>Author: Cameron Gregor</p>
+	</footer>
 
 </xp:view>

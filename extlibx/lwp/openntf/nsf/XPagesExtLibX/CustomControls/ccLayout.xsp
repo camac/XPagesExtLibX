@@ -1,30 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
 
 	<xp:this.resources>
 		<xp:script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js" clientSide="true"></xp:script>
 	</xp:this.resources>
 
-	<xe:navbar id="navbar1">
-		<xe:this.navbarBeforeLinks>
-			<xe:basicContainerNode label="Actions">
-				<xe:this.children>
-					<xe:pageTreeNode page="/DialogActions.xsp"></xe:pageTreeNode>
-				</xe:this.children>
-			</xe:basicContainerNode>
-			<xe:basicContainerNode label="Form Controls">
-				<xe:this.children>
-					<xe:pageTreeNode page="/MasterCheckbox.xsp"></xe:pageTreeNode>
-				</xe:this.children>
-			</xe:basicContainerNode>
-			<xe:basicContainerNode label="Layout Controls">
-				<xe:this.children>
-					<xe:pageTreeNode page="/FormGrid.xsp" label="Form Grid"></xe:pageTreeNode>
-				</xe:this.children>			
-			</xe:basicContainerNode>
-			<xe:basicContainerNode label="JDBC Provider"></xe:basicContainerNode>
-		</xe:this.navbarBeforeLinks>
-	</xe:navbar>
+	<xc:ccNav_Main></xc:ccNav_Main>
+	
 
-
+	
 </xp:view>

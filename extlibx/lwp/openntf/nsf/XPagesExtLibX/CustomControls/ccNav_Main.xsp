@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:navbar id="navbar1">
+		<xe:this.navbarBeforeLinks>
+			<xe:pageTreeNode page="/Home.xsp" label="Home"></xe:pageTreeNode>
+			<xe:basicContainerNode label="Actions">
+				<xe:this.children>
+					<xe:pageTreeNode page="/DialogActions.xsp"></xe:pageTreeNode>
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="Form Controls">
+				<xe:this.children>
+					<xe:pageTreeNode page="/MasterCheckbox.xsp"></xe:pageTreeNode>
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="Layout Controls">
+				<xe:this.children>
+					<xe:pageTreeNode page="/FormGrid.xsp" label="Form Grid"></xe:pageTreeNode>
+				</xe:this.children>
+			</xe:basicContainerNode>
+			<xe:basicContainerNode label="JDBC Provider"></xe:basicContainerNode>
+			<xe:pageTreeNode page="/Themes.xsp" label="Themes"></xe:pageTreeNode>
+		</xe:this.navbarBeforeLinks>
+	</xe:navbar>
+
+</xp:view>

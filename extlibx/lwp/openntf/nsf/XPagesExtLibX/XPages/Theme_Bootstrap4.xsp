@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xp:this.properties>
+		<xp:parameter name="xsp.theme" value="Bootstrap4"></xp:parameter>
+	</xp:this.properties>
+
+	<xp:this.resources>
+		<xp:styleSheet href="/.ibmxspres/.extlib/responsive/bootstrap4/bootswatch-4.0.0/#{param['bootswatch']}/bootstrap.min.css" rendered="${not empty param['bootswatch']}">
+		</xp:styleSheet>
+	</xp:this.resources>
+
+	<xc:ccTheme_Demo></xc:ccTheme_Demo>
+
+</xp:view>

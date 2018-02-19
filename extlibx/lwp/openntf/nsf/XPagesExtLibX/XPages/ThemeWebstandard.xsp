@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
-
-	<xp:this.properties>
-		<xp:parameter name="xsp.theme" value="oneuiv2"></xp:parameter>
-	</xp:this.properties>
-		
-</xp:view>
