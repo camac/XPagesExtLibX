@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<!--  Open a Normal Dialog -->
+	<xp:button value="Open Dialog" id="button1">
+		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+			<xp:this.action>
+				<xe:dialogAction dialogAction="show" for="dialog1"></xe:dialogAction>
+			</xp:this.action>
+		</xp:eventHandler>
+	</xp:button>
+
+	<xe:dialog id="dialog1">
+		<xe:dialogContent id="dialogContent1">
+
+			I am a dialog
+
+		</xe:dialogContent>
+	</xe:dialog>
+
+</xp:view>

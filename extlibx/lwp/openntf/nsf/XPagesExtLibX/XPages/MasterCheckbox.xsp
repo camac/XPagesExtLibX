@@ -1,24 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-
 	<xc:ccLayout></xc:ccLayout>
 
-	<div class="row">
-		<div class="col-md-3 col-md-offset-1">
-			<xc:ccMasterCheckboxTable></xc:ccMasterCheckboxTable></div>
-		<div class="col-md-6">
-			<xe:prettyPrint id="prettyPrint1" pageName="ccMasterCheckboxTable.xsp"></xe:prettyPrint>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Master Checkbox</h1>
+			<p>The Master checkbox control provides an easier way to do Multiple checkbox selection when using repeats </p>
+			<xe:navbar id="navbar1" inverted="true" loaded="false">
+				<xe:this.navbarBeforeLinks>
+					<xe:basicLeafNode label="Table Example"></xe:basicLeafNode>
+					<xe:basicLeafNode label="Div Example"></xe:basicLeafNode>
+				</xe:this.navbarBeforeLinks>
+			</xe:navbar>
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="col-md-3 col-md-offset-1">
-			<xc:ccMasterCheckboxDiv></xc:ccMasterCheckboxDiv></div>
-		<div class="col-md-6">
-			<xe:prettyPrint id="prettyPrint2" pageName="ccMasterCheckboxDiv.xsp"></xe:prettyPrint>
+	<div class="container">
+
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Table-based Example</h4>
+				<p>In this example, the 'slave' checkboxes are placed within rows of a table</p>
+
+				<xc:ccMasterCheckboxTable></xc:ccMasterCheckboxTable>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<xe:prettyPrint id="prettyPrint1" pageName="ccMasterCheckboxTable.xsp"></xe:prettyPrint>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h4>Div-based Example</h4>
+				<p>In this example, the 'slave' checkboxes are placed within rows of a table</p>
+			
+				<xc:ccMasterCheckboxDiv></xc:ccMasterCheckboxDiv>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<xe:prettyPrint id="prettyPrint2" pageName="ccMasterCheckboxDiv.xsp"></xe:prettyPrint>
+			</div>
 		</div>
 	</div>
-
 
 </xp:view>

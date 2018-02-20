@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccNav_Main></xc:ccNav_Main>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Extensions</h1>
+			<p>The XPages framework is designed for extensibility. This means if you don't like how something works, or think something is missing, there is often a
+				way to achieve what you want</p>
+			<p>Here are some extra features that extend the XPages framework to provide new or modified behaviours</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>JDBC Provider</h2>
+				<p>These Controls are all about helping you layout your pages</p>
+				<p>So much time is wasted trying to get you page right, why not use these controls to make your life easier!</p>
+				<p>
+					<xp:button value="View" id="button1">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap3.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Themes for Individual XPages</h2>
+				<p>Sometimes you want some specific XPages to use a different theme to the rest of the application</p>
+				<p>The ExtLibX project provides a simple way to do this (with thanks from Sven Hasselbach for the original solution!)</p>
+				<p>
+					<xp:button value="View" id="button2">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap4.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+
+			</div>
+			<div class="col-md-4">
+
+			</div>
+		</div>
+	</div>
+
+</xp:view>

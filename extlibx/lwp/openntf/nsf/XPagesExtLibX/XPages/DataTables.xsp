@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccLayout></xc:ccLayout>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">JQuery DataTables Control</h1>
+			<p>JQuery DataTables is a very useful JQuery plugin for creating a Data Grid</p>
+			<p>The ExtLibX project provides an XPages Control which makes it easier to use this plugin</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Coming Soon!</h2>
+				<p>There is Quite a bit of work to do to get this ready!</p>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>Author: Cameron Gregor</p>
+	</footer>
+
+</xp:view>

@@ -1,43 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
 
-	<xp:this.data>
-		<xe:jdbcQuery var="jdbcQuery1" sqlTable="CUSTOMER" connectionName="customerdatabase"></xe:jdbcQuery>
-	</xp:this.data>
+	<xc:ccNav_Main></xc:ccNav_Main>
 
-	<xp:table>
-		<xp:this.facets>
-			<xp:tr xp:key="thead">
-				<xe:th>First Name</xe:th>
-				<xe:th>Last Name</xe:th>
-				<xe:th>Street</xe:th>
-				<xe:th>City</xe:th>
-			</xp:tr>
-			<xp:tr xp:key="tfoot">
-				<xp:td colspan="4"> I am the Footer</xp:td>
-			</xp:tr>
-		</xp:this.facets>
+	<div class="jumbotron">
+		<div class="container">
+			<h3 class="display-3">NSF Based JDBC Connection Provider</h3>
+			<p>The NSF Based JDBC Provider allows you to store database connection information within Notes Documents</p>
+			<p>This provides a more flexible method of configuring your connection settings. Instead of having to use the default xml file based system</p>
+		</div>
+	</div>
 
-		<xp:repeat id="repeat1" rows="30" value="#{jdbcQuery1}" var="rowData">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<xe:outline id="outline1">
+					<xe:this.treeNodes>
+						<xe:basicLeafNode label="About"></xe:basicLeafNode>
+					</xe:this.treeNodes>
+				</xe:outline>
+			</div>
+			<div class="col-md-9">
+				
+				<p>Coming Soon...</p>				
 
-			<xp:tr>
-				<xp:td>
-					<xp:text escape="true" id="computedField1" value="#{rowData.firstname}"></xp:text>
-				</xp:td>
-				<xp:td>
-					<xp:text escape="true" id="computedField2" value="#{rowData.lastname}"></xp:text>
-				</xp:td>
-				<xp:td>
-					<xp:text escape="true" id="computedField3" value="#{rowData.street}"></xp:text>
-				</xp:td>
-				<xp:td>
-					<xp:text escape="true" id="computedField4" value="#{rowData.city}"></xp:text>
-				</xp:td>
-			</xp:tr>
+			</div>
+		</div>
+	</div>
 
-		</xp:repeat>
 
-	</xp:table>
+
+	<!--	<xp:this.data>-->
+	<!--		<xe:jdbcQuery var="jdbcQuery1" sqlTable="CUSTOMER" connectionName="customerdatabase"></xe:jdbcQuery>-->
+	<!--	</xp:this.data>-->
+<!---->
+	<!--	<xp:table>-->
+	<!--		<xp:this.facets>-->
+	<!--			<xp:tr xp:key="thead">-->
+	<!--				<xe:th>First Name</xe:th>-->
+	<!--				<xe:th>Last Name</xe:th>-->
+	<!--				<xe:th>Street</xe:th>-->
+	<!--				<xe:th>City</xe:th>-->
+	<!--			</xp:tr>-->
+	<!--			<xp:tr xp:key="tfoot">-->
+	<!--				<xp:td colspan="4">I am the Footer</xp:td>-->
+	<!--			</xp:tr>-->
+	<!--		</xp:this.facets>-->
+<!---->
+	<!--		<xp:repeat id="repeat1" rows="30" value="#{jdbcQuery1}" var="rowData">-->
+<!---->
+	<!--			<xp:tr>-->
+	<!--				<xp:td>-->
+	<!--					<xp:text escape="true" id="computedField1" value="#{rowData.firstname}"></xp:text>-->
+	<!--				</xp:td>-->
+	<!--				<xp:td>-->
+	<!--					<xp:text escape="true" id="computedField2" value="#{rowData.lastname}"></xp:text>-->
+	<!--				</xp:td>-->
+	<!--				<xp:td>-->
+	<!--					<xp:text escape="true" id="computedField3" value="#{rowData.street}"></xp:text>-->
+	<!--				</xp:td>-->
+	<!--				<xp:td>-->
+	<!--					<xp:text escape="true" id="computedField4" value="#{rowData.city}"></xp:text>-->
+	<!--				</xp:td>-->
+	<!--			</xp:tr>-->
+<!---->
+	<!--		</xp:repeat>-->
+<!---->
+	<!--	</xp:table>-->
 
 
 

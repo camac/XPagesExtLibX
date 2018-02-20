@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
 
-	<h2>Example using tr as a Parent Element</h2>
 	<style>tr.selected td { background-color: #5bacf3; color: white; }</style>
 	<xp:table styleClass="table">
-		<xp:tr>
-			<xp:td>
-				<xe:masterCheckBox id="masterCheckBox1" parentSelectorClick="tr" parentSelectorStyleClass="tr" parentStyleClassChecked="selected"
-					value="#{requestScope.burgercontents}">
-				</xe:masterCheckBox>
-			</xp:td>
-			<xp:td>Topping</xp:td>
-		</xp:tr>
+		<xp:this.facets>
+			<xp:tr xp:key="thead">
+				<xe:th>
+					<xe:masterCheckBox id="masterCheckBox1" parentSelectorClick="tr" parentSelectorStyleClass="tr" parentStyleClassChecked="selected"
+						value="#{requestScope.burgercontents}">
+					</xe:masterCheckBox>
+				</xe:th>
+				<xe:th>Topping</xe:th>
+			</xp:tr>
+		</xp:this.facets>
 		<xp:repeat id="repeat1" rows="30" value="#{javascript:
 		return ['Bacon', 'Egg', 'Pineapple', 'Lettuce', 'Onion', 'Beetroot']}" var="ingredient">
 			<xp:tr>

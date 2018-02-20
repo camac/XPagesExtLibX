@@ -1,35 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
 	<xc:ccLayout></xc:ccLayout>
-	<!-- Open a Normal Dialog -->
-	<xp:button value="Open Dialog" id="button1">
-		<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
-			<xp:this.action>
-				<xe:dialogAction dialogAction="show" for="dialog1"></xe:dialogAction>
-			</xp:this.action>
-		</xp:eventHandler>
-	</xp:button>
 
-	<xp:button value="Open Tooltip Dialog with this button as target" id="button2">
-		<xp:eventHandler event="onclick" submit="false">
-			<xp:this.script>
-				<xe:openTooltipDialog dialogId="tooltipDialog1" targetId="button2"></xe:openTooltipDialog>
-			</xp:this.script>
-		</xp:eventHandler>
-	</xp:button>
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Dialog Actions</h1>
+			<p>Are you fed up with having to use SSJS to open and close Dialogs?<br/>
+			Then why not try these Simple Actions!</p>
+		</div>
+	</div>
 
-	<xe:dialog id="dialog1">
-		<xe:dialogContent id="dialogContent1">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Open Dialog</h3>
+				<p>The <strong>Dialog Action</strong> simple action allows you to easily close or open a dialog</p>
 
-			I am a dialog
+				<xc:ccDialogAction></xc:ccDialogAction>
 
-		</xe:dialogContent>
-	</xe:dialog>
+				<h5>XPage Markup</h5>
+				<xe:prettyPrint id="prettyPrint1" pageName="ccDialogAction.xsp"></xe:prettyPrint>
 
-	<xe:tooltipDialog id="tooltipDialog1">
-		<xe:dialogContent id="dialogContent2">I am a tooltip dialog</xe:dialogContent>
-	</xe:tooltipDialog>
+			</div>
+		</div>
 
-	<xe:prettyPrint id="prettyPrint1" pageName="ccDialogActions.xsp"></xe:prettyPrint>
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Open Tootip Dialog</h3>
+				<p>The <strong>Dialog Action</strong> simple action allows you to easily close or open a dialog</p>
+
+				<xc:ccOpenTooltipDialog></xc:ccOpenTooltipDialog>
+
+				<h5>XPage Markup</h5>
+				<xe:prettyPrint id="prettyPrint2" pageName="ccOpenTooltipDialog.xsp"></xe:prettyPrint>
+
+			</div>
+		</div>
+
+	</div>
+
+
+	
 
 </xp:view>

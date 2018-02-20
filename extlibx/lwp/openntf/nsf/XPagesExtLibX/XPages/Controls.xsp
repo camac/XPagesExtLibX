@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xc:ccNav_Main></xc:ccNav_Main>
+
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="display-3">Controls</h1>
+			<p>This section showcases the XPages Controls that are available in the ExtLibX project</p>
+			<p>These Controls will hopefully make building XPages more enjoyable for you, and also more enjoyable for your users to use</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<h2>Layout Controls</h2>
+				<p>These Controls are all about helping you layout your pages</p>
+				<p>So much time is wasted trying to get you page right, why not use these controls to make your life easier!</p>
+				<p>
+					<xp:button value="View" id="button1">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap3.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<h2>Data Controls</h2>
+				<p>These controls are all about displaying data and getting input from the User	</p>
+				<p>
+					<xp:button value="View" id="button2">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Bootstrap4.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+
+			</div>
+			<div class="col-md-4">
+				<h2>Simple Actions</h2>
+				<p>One under-used feature of XPages is the SimpleActions framework</p>
+				<p>Here are some extra Simple Actions that you can use which might help avoid a bit of Server Side Javascript</p>
+				<p>
+					<xp:button value="View" id="button3">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete">
+							<xp:this.action>
+								<xp:openPage name="/Theme_Webstandard.xsp"></xp:openPage>
+							</xp:this.action>
+						</xp:eventHandler>
+					</xp:button>
+				</p>
+
+			</div>
+		</div>
+	</div>
+
+</xp:view>

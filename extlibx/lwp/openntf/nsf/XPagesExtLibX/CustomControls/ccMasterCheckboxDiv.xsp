@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
-	
-	<h2>Example using div as a Parent Element</h2>
+
 	<style>div.wrapper {padding: 5px;} div.selected { background-color: #5bacf3; color: white; }</style>
+
 	<xp:div>
 		<xp:div>
-			<xe:masterCheckBox id="masterCheckBox2" parentSelectorClick="div.wrapper" parentSelectorStyleClass="div.wrapper" parentStyleClassChecked="selected"
-				value="#{requestScope.burgercontents2}">
-			</xe:masterCheckBox>
+			<xp:span style="display: inline-block; vertical-align: middle;">
+				<xe:masterCheckBox id="masterCheckBox2" parentSelectorClick="div.wrapper" parentSelectorStyleClass="div.wrapper" parentStyleClassChecked="selected"
+					value="#{requestScope.burgercontents2}">
+				</xe:masterCheckBox>
+
+			</xp:span>
+			<xp:span>
+				<xp:text escape="true" id="computedField1" value="Toppings"></xp:text>
+			</xp:span>
+
 		</xp:div>
 		<xp:repeat id="repeat2" rows="30" value="#{javascript: return ['Bacon', 'Egg', 'Pineapple', 'Lettuce', 'Onion', 'Beetroot']}" var="ingredient">
 			<xp:div styleClass="wrapper">
