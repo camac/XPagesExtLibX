@@ -18,6 +18,8 @@
 				<xe:this.children>
 					<xe:pageTreeNode page="/JDBCProvider.xsp" label="JDBC Provider">
 					</xe:pageTreeNode>
+					<xe:pageTreeNode page="/PageThemes.xsp" label="Page Themes">
+					</xe:pageTreeNode>
 				</xe:this.children>
 			</xe:pageTreeNode>
 			<xe:pageTreeNode page="/Themes.xsp" label="Themes"></xe:pageTreeNode>
