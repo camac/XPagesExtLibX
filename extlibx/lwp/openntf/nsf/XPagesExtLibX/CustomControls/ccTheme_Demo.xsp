@@ -192,6 +192,8 @@
 			</div>
 		</div>
 
+		<xc:ccThemeDemo_Buttons></xc:ccThemeDemo_Buttons>
+
 	</div>
 
 </xp:view>
