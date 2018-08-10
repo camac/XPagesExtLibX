@@ -36,6 +36,7 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 				"com/ibm/xsp/extlibx/controls/config/extlib-dialog.xsp-config", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-prettyprint.xsp-config", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-formgrid.xsp-config", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-extsn.xsp-config", // $NON-NLS-1$
 		});
 	}
 
@@ -46,6 +47,7 @@ public class ControlsXConfig extends ExtlibPluginConfig {
 				"com/ibm/xsp/extlibx/controls/config/extlib-jdbc-faces-config.xml", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-mastercheckbox-faces-config.xml", // $NON-NLS-1$
 				"com/ibm/xsp/extlibx/controls/config/extlib-formgrid-faces-config.xml", // $NON-NLS-1$
+				"com/ibm/xsp/extlibx/controls/config/extlib-extsn-faces-config.xml", // $NON-NLS-1$
 		});
 	}
 

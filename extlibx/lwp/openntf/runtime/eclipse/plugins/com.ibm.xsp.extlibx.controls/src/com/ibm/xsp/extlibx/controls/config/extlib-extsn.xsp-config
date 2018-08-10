@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config>
+
+	<faces-config-extension>
+		<namespace-uri>http://www.ibm.com/xsp/coreex</namespace-uri>
+		<default-prefix>xe</default-prefix>
+	</faces-config-extension>
+
+	<group>
+
+		<group-type>com.ibm.xsp.extlib.FormGridFriendly</group-type>
+
+		<property>
+			<description>Text to show in associated Label</description>
+			<display-name>Label Text</display-name>
+			<property-name>label</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+		<property>
+			<description>Help Text to show below control when used in a FormGrid</description>
+			<display-name>Help Text</display-name>
+			<property-name>help</property-name>
+			<property-class>java.lang.String</property-class>
+			<property-extension>
+				<allow-run-time-binding>true</allow-run-time-binding>
+				<designer-extension>
+					<category>basics</category>
+				</designer-extension>
+			</property-extension>
+		</property>
+
+	</group>
+
+	<component>
+		<description>A Modified version of the InputText</description>
+		<display-name>Input Text</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.xe.XeInputText</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.xe.XeInputText</component-class>
+
+		<group-type-ref>com.ibm.xsp.extlib.FormGridFriendly</group-type-ref>
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.InputText</base-component-type>
+			<tag-name>inputText</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>ExtLibX Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+	<component>
+		<description>A Modified version of the RadioGroup</description>
+		<display-name>Radio Group</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.xe.XeSelectOneRadio</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.xe.XeSelectOneRadio</component-class>
+
+		<group-type-ref>com.ibm.xsp.extlib.FormGridFriendly</group-type-ref>
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.SelectOneRadio</base-component-type>
+			<tag-name>radioGroup</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>ExtLibX Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+	<component>
+		<description>A Modified version of the CheckBoxGroup</description>
+		<display-name>Check Box Group</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.xe.XeSelectManyCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.xe.XeSelectManyCheckbox</component-class>
+
+		<group-type-ref>com.ibm.xsp.extlib.FormGridFriendly</group-type-ref>
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.SelectManyCheckbox</base-component-type>
+			<tag-name>checkBoxGroup</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>ExtLibX Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+	<component>
+		<description>A Modified version of the CheckBox</description>
+		<display-name>Check Box</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.xe.XeInputCheckbox</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.xe.XeInputCheckbox</component-class>
+
+		<group-type-ref>com.ibm.xsp.extlib.FormGridFriendly</group-type-ref>
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.InputCheckbox</base-component-type>
+			<tag-name>checkBox</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>ExtLibX Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+	<component>
+		<description>A Modified version of the InputTextarea</description>
+		<display-name>Input Text Area</display-name>
+		<component-type>com.ibm.xsp.extlibx.component.xe.XeInputTextarea</component-type>
+		<component-class>com.ibm.xsp.extlibx.component.xe.XeInputTextarea</component-class>
+
+		<group-type-ref>com.ibm.xsp.extlib.FormGridFriendly</group-type-ref>
+
+		<component-extension>
+			<base-component-type>com.ibm.xsp.InputTextarea</base-component-type>
+			<tag-name>inputTextarea</tag-name>
+			<designer-extension>
+				<in-palette>true</in-palette>
+				<category>ExtLibX Core</category>
+			</designer-extension>
+		</component-extension>
+	</component>
+
+</faces-config>
