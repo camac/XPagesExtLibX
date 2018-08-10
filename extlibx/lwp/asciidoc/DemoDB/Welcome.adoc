@@ -1,0 +1,8 @@
+Welcome the ExtLibX Demonstration Database
+
+The database gives you an opporunity to see how the Controls and Techniques work.
+
+Each Control or Technique is given a dedicated page which you can visit to see in in operation and maybe even adjust some properties to see how it differs.
+
+You should also be able to see the exact xpages markup necessary to use the control. (all thanks to the pretty print control!)
+

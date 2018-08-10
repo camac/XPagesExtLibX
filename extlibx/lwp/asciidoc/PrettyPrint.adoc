@@ -1,0 +1,15 @@
+== Pretty Print
+
+The pretty print control is used to do some code highlighting.
+You can see it in use within the ExtLibX Demonstration Database.
+
+=== Properties
+
+pageName:: If you would like to show the contents of an XPage or a Custom Control, then put it here
+lineNumbers:: boolean - if true, it will include line numbers
+languageHint:: This is a hint at what sort of programming language / markup is to be highlighted.
+
+=== Formatting
+
+
+
