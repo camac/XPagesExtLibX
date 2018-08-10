@@ -27,7 +27,7 @@
 	</resource>
 	
     <!-- bootstrap core styles -->
-	<resource>
+	<resource rendered="#{empty param['bootswatch']}">
 		<content-type>text/css</content-type>
 		<href>/.ibmxspres/.extlib/responsive/bootstrap4/css/bootstrap.min.css</href>
 	</resource>
